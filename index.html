@@ -1,37 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-dztt8D1P3OmGv1ui7PrZcnIazWwObQGQ7Q6l9vTnfEqB+miFsOgOFu2RCdEIKplgRGv2ATQa/O5s7cyjuhdW1g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  
+    Score
 
-  Score
-  Rules
 
-  You Picked
-  The House Picked
+    Score
+    
 
-  You Win
-  You Lose
+    You Picked
+    The House Picked
 
-  Play Again
+    You Win
+    You Lose
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    Play Again
+
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet  -->
+    <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
-<body>
 
+<body>
+  <div class="icons">
+    
+    <i class="far fa-hand-paper  top" onclick="choose('paper')">
+      <img src="images/icon-paper.svg" alt="paper">
+    </i>
+    <i class="far fa-hand-scissors  top" onclick="choose('scissors')">
+      <img src="images/icon-scissors.svg" alt="scissors">
+    </i>
+    <i class="far fa-hand-rock rock" onclick="choose('rock')">
+      <img src="images/icon-rock.svg" alt="rock">
+    </i>
+  </div>
+    
+  
+    <div id="rulesPopup" class="popup">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <img src="images/image-rules.svg" alt="Rules">
+    </div>
 
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <button id="rulesButton" >Rules</button>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  
 </body>
+
 </html>
